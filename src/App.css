@@ -1,38 +1,149 @@
+body {
+  margin: 0;
+  background: url(../src/bg-1.jpeg) no-repeat;
+}
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.password-generator-block {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.password-generator-holder {
+  max-width: 500px;
+  width: 100%;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 4px;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  margin: 0 0 50px;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0 0 20px;
+}
+
+.btn {
+  border: none;
+  background: #609CC3;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 0 30px;
+}
+
+.length-block {
+  margin: 0 0 20px;
+}
+
+.length-block label{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.length-block input {
+  width: 60px;
+  border:none;
+  background: #fff;
+  border-radius: 3px;
+  padding: 7px 10px;
+  outline: none;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  font-size: 15px;
+}
+
+.number-symbol-block {
+  margin: 0 0 30px;
+}
+
+.number-symbol-block div{
+  margin: 0 0 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.number-symbol-block .checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.number-symbol-block .checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.number-symbol-block .checkbox-label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #609CC3;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.password-block .password {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  min-height: 40px;
+  min-width: 80px;
+  font-size: 15px;
+  line-height: 20px;
 }
